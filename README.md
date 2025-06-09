@@ -51,14 +51,17 @@ Noted : Signature and TimeStamp is different every 5 min. Ensure generate correc
 
 
 Check Log file in local
-
-
-
-Check Log file Docker
-
-
-
-
+-Fourtitude-Assessment\Fourtitude-Assessment\bin\Debug\net6.0\log.txt
 
 Dcoker command check the log.txt
 -docker exec -it fourtitude-api-container  cat log.txt
+
+
+
+use Docker build image
+-docker build -t fourtitude-api .
+-docker run -d -p 8081:80 --name fourtitude-api-container fourtitude-api
+
+
+
+use http://localhost:8081/swagger to see the swagger.
